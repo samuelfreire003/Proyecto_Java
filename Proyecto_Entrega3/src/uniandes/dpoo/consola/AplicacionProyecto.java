@@ -177,13 +177,7 @@ public class AplicacionProyecto
 			int DiaInicioActividad= 0;
 			int HoraFinalActividad = 0;
 			int MinutoFinalActividad = 0;
-			int opcionTiempoCronometro = Integer.parseInt(input("Marque 0 para empezar a cronometrar la actividad"));
-			if (opcionTiempoCronometro == 0)
-			{
-				LocalDateTime locaDate = LocalDateTime.now();
-				HoraInicioActividad  = locaDate.getHour();
-				MinutoInicioActividad = locaDate.getMinute();
-			}
+			
 			int opcionfecha= Integer.parseInt(input("Quiere predefinir las fecha de inicio (marque 0), quiere modificar la fecha (marque 1)"));
 			if (opcionfecha == 0)
 			{
@@ -198,12 +192,55 @@ public class AplicacionProyecto
 				MesInicioActividad = Integer.parseInt(input("Por favor coloque el mes de inicio"));
 				AñoInicioActividad = Integer.parseInt(input("Por favor coloque el año de inicio"));
 			}
-			int opcionTiempoCronometrofin = Integer.parseInt(input("Marque 1 para parar de cronometrar la actividad"));
-			if (opcionTiempoCronometrofin == 1)	
+			
+			int opcionTiempoCronometro = Integer.parseInt(input("Marque 0 para empezar a cronometrar la actividad"));
+			if (opcionTiempoCronometro == 0)
 			{
-				LocalDateTime locaDatefiNAL = LocalDateTime.now();
-				HoraFinalActividad  = locaDatefiNAL.getHour();
-				MinutoFinalActividad = locaDatefiNAL.getMinute();
+				LocalDateTime locaDate = LocalDateTime.now();
+				HoraInicioActividad  = locaDate.getHour();
+				MinutoInicioActividad = locaDate.getMinute();
+				
+				int opcionTiempoparar = Integer.parseInt(input("Marque 2 si deasea parar el tiempo, marque 3 si no"));
+				if (opcionTiempoparar == 2)
+				{
+					LocalDateTime locaDateparar = LocalDateTime.now();
+					int tiempodesdeinicioHoras = (locaDateparar.minusHours(HoraInicioActividad)).getHour();
+					int tiempodesdeinicioMinutos = (locaDateparar.minusMinutes(MinutoInicioActividad)).getMinute();
+					
+					int opcionTiempoContinuar = Integer.parseInt(input("Marque 4 si deasea continuar el tiempo"));
+					if (opcionTiempoContinuar == 4)
+					{
+						LocalDateTime locaDateContinuar = LocalDateTime.now();
+						int horascontinuar = locaDateContinuar.getHour();
+						int Minutoscontinuar = locaDateContinuar.getMinute();
+						
+						int opcionTiempoCronometrofinPausa = Integer.parseInt(input("Marque 1 para parar de cronometrar la actividad"));
+						if (opcionTiempoCronometrofinPausa == 1)	
+						{
+							LocalDateTime locaDatefiNALcontinuar = LocalDateTime.now();
+							int tiempodesdefinalHoras = (locaDatefiNALcontinuar.minusHours(horascontinuar)).getHour();
+							int tiempodesdefinalMinutos = (locaDatefiNALcontinuar.minusMinutes(Minutoscontinuar)).getMinute();
+							
+							int horasactivas = tiempodesdeinicioHoras + tiempodesdefinalHoras;
+							int minutosactivas = tiempodesdeinicioMinutos + tiempodesdefinalMinutos;
+							
+							HoraFinalActividad  = (locaDate.plusHours(horasactivas)).getHour();
+							MinutoFinalActividad = (locaDate.plusMinutes(minutosactivas)).getMinute();
+							
+						}
+					}
+				}
+				else if (opcionTiempoparar == 3)
+				{
+					int opcionTiempoCronometrofin = Integer.parseInt(input("Marque 1 para parar de cronometrar la actividad"));
+					if (opcionTiempoCronometrofin == 1)	
+					{
+						LocalDateTime locaDatefiNAL = LocalDateTime.now();
+						HoraFinalActividad  = locaDatefiNAL.getHour();
+						MinutoFinalActividad = locaDatefiNAL.getMinute();
+					}
+				}
+				
 			}
 			ManejadorProyecto.CrearRegistro(TituloActividad,DescripcionActividad,TipoActividad,DiaInicioActividad,MesInicioActividad,AñoInicioActividad,HoraInicioActividad,MinutoInicioActividad,HoraFinalActividad,MinutoFinalActividad,NombreCreadorProyecto,CorreoCreadorProyecto);
 		}
