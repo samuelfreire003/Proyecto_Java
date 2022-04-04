@@ -1,0 +1,4 @@
+titulo,descripcion,tipo,fechaInicio,horaInicio,horaFinal,particpanteEncargado
+LLevar a cabo el sorte ddel mundial,Se espera distribuir los equipos en la fase de grupos del mundial,Documentar,3/4/2022,20:26,22:10,Felipe Garcia (f.garcia)
+Analizar lo equipos que quedan en los grupos,Se espera analizar de cierta manera los equipos de cada grupos del mundial,Analisis,27/10/2003,10:10,20:10,Samuel Freire (s.freire)
+Documentar los eventos de un transmision,Se espera llevar a cabo un analisis de como se lleva a cabo una transmision,Documentacion,3/4/2022,20:31,20:31,Felipe Garcia (f.garcia)

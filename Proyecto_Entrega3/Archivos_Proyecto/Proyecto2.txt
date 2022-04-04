@@ -1,0 +1,4 @@
+titulo,descripcion,tipo,fechaInicio,horaInicio,horaFinal,particpanteEncargado
+Mirar estadisticas del proyecto,Se espera dediar cierto tiempo para mirar ls estadisticas de un proyecto especifico,Documentacion,3/4/2022,20:15,22:10,Felipe Garcia (f.garcia)
+Llenar formato de actividades del proyecto,se espera llenar los tiempos de un proyecto,Cronometrar,27/10/2003,14:10,11:10,Samuel Freire (s.freire)
+LLenar Admision Universidad,Se espera verificar las admisiones de estudiantes a los andes,Documentar,27/10/2003,20:18,20:19,Felipe Garcia (f.garcia)
