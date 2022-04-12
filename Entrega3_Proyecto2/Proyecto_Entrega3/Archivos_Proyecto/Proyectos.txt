@@ -1,0 +1,6 @@
+Titulo, Descripcion, Fecha Inicio, Fecha Finalizacion, ParticipanteCreador, TiposAdmitidosActividad
+Proyecto1,Proyecto creado para administrar las actividades de unos participantes del proyecto,27/10/2003,30/11/2003,Samuel Freire (s.freire),Documentacion/Analisis/Cronometrar
+Proyecto2,Proyecto creado para administrar las finanzas de unos participantes del proyecto,28/10/2003,31/11/2003,Samuel Freire (s.freire),Documentacion/Analisis
+Proyecto3,Proyecto creado para administrar los participantes del proyecto,14/4/2004,20/10/2003,11 (10),Documentacion
+Proyecto4,Proyecto creado para administrar las actividades de unos participantes del proyecto,10/4/2002,4/11/2003,Samuel Freire (s.freire),Analisis/Cronometrar
+Proyecto5,Proyecto creado para administrar las actividades de unos participantes del proyecto,24/12/2003,24/12/2004,Samuel Freire (Samuel Freire),Cronometrar
