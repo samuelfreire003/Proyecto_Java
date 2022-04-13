@@ -325,7 +325,7 @@ public class AplicacionProyecto
 		
 	}
 	
-	private void ejecutarImprimirReporteDia(Map<String, Map<String, String>> registroDia) throws FileNotFoundException, IOException
+	public static void ejecutarImprimirReporteDia(Map<String, Map<String, String>> registroDia) throws FileNotFoundException, IOException
 	{
 		
 		System.out.println("\n" + "***********************************Reporte por Dia (activo) de cada participante del proyecto (que realizo actividades)***********************************" + "\n");
