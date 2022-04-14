@@ -39,6 +39,8 @@ public class PanelBotones extends JPanel implements ActionListener
 		add(BOTON1);
 		
 		BOTON2 = new JButton( "Crear reporte Predefinida" );
+		BOTON2.addActionListener( this );
+		BOTON2.setActionCommand( "CrearParticipante" );
 		add(BOTON2);
 		
 		BOTON3 = new JButton( "Crear Proyecto" );
@@ -52,6 +54,8 @@ public class PanelBotones extends JPanel implements ActionListener
 		add(BOTON4);
 		
 		BOTON5 = new JButton( "Crear rep. cronometrada" );
+		BOTON5.addActionListener( this );
+		BOTON5.setActionCommand( "CrearRegistroCrono" );
 		add(BOTON5);
 		
 		BOTON6 = new JButton( "Agregar Participante" );
@@ -112,6 +116,31 @@ public class PanelBotones extends JPanel implements ActionListener
 				ventanaPrincipal = new VentanaReporteGeneral();
 				ventanaPrincipal.setVisible(true);
 	    		ventanaPrincipal.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+        	 
+    		
+        }
+        
+        else if(comando.equals( "CrearParticipante" ))
+        {
+        	VentanaCreacionParticipante ventanaPrincipalcreacionparticipante;
+			ventanaPrincipalcreacionparticipante = new VentanaCreacionParticipante();
+			ventanaPrincipalcreacionparticipante.setVisible(true);
+			ventanaPrincipalcreacionparticipante.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        	 
+    		
+        }
+        
+        else if(comando.equals( "CrearRegistroCrono" ))
+        {
+        	VentanaRegistroCrono ventanaPrincipalcreacionparticipantecrono;
+        	try {
+				ventanaPrincipalcreacionparticipantecrono = new VentanaRegistroCrono();
+				ventanaPrincipalcreacionparticipantecrono.setVisible(true);
+	        	ventanaPrincipalcreacionparticipantecrono.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 			} catch (IOException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();

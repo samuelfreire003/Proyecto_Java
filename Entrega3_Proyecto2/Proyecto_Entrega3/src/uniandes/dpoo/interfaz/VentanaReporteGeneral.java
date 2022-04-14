@@ -1,18 +1,13 @@
 package uniandes.dpoo.interfaz;
 
-import java.awt.BorderLayout;
-import java.awt.Dimension;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import javax.swing.JFrame;
-import javax.swing.JScrollPane;
 
 public class VentanaReporteGeneral extends JFrame
 {
 	private PanelReporteGeneral panelreportegeneral;
-	
-	private JScrollPane barras;
 	
 	public VentanaReporteGeneral () throws FileNotFoundException, IOException
 	{
@@ -22,7 +17,6 @@ public class VentanaReporteGeneral extends JFrame
 		setLocationRelativeTo( null );
 		
 		panelreportegeneral = new  PanelReporteGeneral();
-		
 		add(panelreportegeneral);
 	}
 }
