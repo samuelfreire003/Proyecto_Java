@@ -126,7 +126,7 @@ public class PanelBotones extends JPanel implements ActionListener
         {
         	VentanaReporteGeneral ventanaPrincipal;
 			try {
-				JOptionPane.showMessageDialog(this, "PORFAVOR ASEGURESE DE HABER SELECCIONADO UN PROYECTO EN LA LISTA DE LA PANTALLA PRINCIPAL, SOLO TIENE QUE HACER CLICK EN EL PROYECTO QUE DESEE");
+				JOptionPane.showMessageDialog(this, "PORFAVOR ASEGURESE DE HABER SELECCIONADO UN PROYECTO EN LA LISTA DE LA PANTALLA PRINCIPAL, SOLO TIENE QUE HACER CLICK EN EL PROYECTO QUE DESEE, SI YA LO HIZO DELE ACEPTAR SINO PORFAVOR DEVUELVASE Y SELECCIONE");
 				ventanaPrincipal = new VentanaReporteGeneral();
 				ventanaPrincipal.setVisible(true);
 	    		ventanaPrincipal.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -140,7 +140,7 @@ public class PanelBotones extends JPanel implements ActionListener
         
         else if(comando.equals( "CrearParticipante" ))
         {
-        	JOptionPane.showMessageDialog(this, "PORFAVOR ASEGURESE DE HABER SELECCIONADO UN PROYECTO EN LA LISTA DE LA PANTALLA PRINCIPAL, SOLO TIENE QUE HACER CLICK EN EL PROYECTO QUE DESEE");
+        	JOptionPane.showMessageDialog(this, "PORFAVOR ASEGURESE DE HABER SELECCIONADO UN PROYECTO EN LA LISTA DE LA PANTALLA PRINCIPAL, SOLO TIENE QUE HACER CLICK EN EL PROYECTO QUE DESEE, SI YA LO HIZO DELE ACEPTAR SINO PORFAVOR DEVUELVASE Y SELECCIONE");
         	VentanaCreacionParticipante ventanaPrincipalcreacionparticipante;
 			ventanaPrincipalcreacionparticipante = new VentanaCreacionParticipante();
 			ventanaPrincipalcreacionparticipante.setVisible(true);
@@ -153,7 +153,7 @@ public class PanelBotones extends JPanel implements ActionListener
         {
         	VentanaRegistroCrono ventanaPrincipalcreacionparticipantecrono;
         	try {
-        		JOptionPane.showMessageDialog(this, "PORFAVOR ASEGURESE DE HABER SELECCIONADO UN PROYECTO EN LA LISTA DE LA PANTALLA PRINCIPAL, SOLO TIENE QUE HACER CLICK EN EL PROYECTO QUE DESEE");
+        		JOptionPane.showMessageDialog(this, "PORFAVOR ASEGURESE DE HABER SELECCIONADO UN PROYECTO EN LA LISTA DE LA PANTALLA PRINCIPAL, SOLO TIENE QUE HACER CLICK EN EL PROYECTO QUE DESEE, SI YA LO HIZO DELE ACEPTAR SINO PORFAVOR DEVUELVASE Y SELECCIONE");
 				ventanaPrincipalcreacionparticipantecrono = new VentanaRegistroCrono();
 				ventanaPrincipalcreacionparticipantecrono.setVisible(true);
 	        	ventanaPrincipalcreacionparticipantecrono.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -169,7 +169,7 @@ public class PanelBotones extends JPanel implements ActionListener
         {
         	VentanaVisualizacionProgreso ventanaVisu;
         	try {
-        		JOptionPane.showMessageDialog(this, "PORFAVOR ASEGURESE DE HABER SELECCIONADO UN PROYECTO EN LA LISTA DE LA PANTALLA PRINCIPAL, SOLO TIENE QUE HACER CLICK EN EL PROYECTO QUE DESEE");
+        		JOptionPane.showMessageDialog(this, "PORFAVOR ASEGURESE DE HABER SELECCIONADO UN PROYECTO EN LA LISTA DE LA PANTALLA PRINCIPAL, SOLO TIENE QUE HACER CLICK EN EL PROYECTO QUE DESEE, SI YA LO HIZO DELE ACEPTAR SINO PORFAVOR DEVUELVASE Y SELECCIONE");
         		ventanaVisu = new VentanaVisualizacionProgreso();
         		ventanaVisu.setVisible(true);
         		ventanaVisu.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -185,7 +185,7 @@ public class PanelBotones extends JPanel implements ActionListener
         {
   
 				try {
-					JOptionPane.showMessageDialog(this, "PORFAVOR ASEGURESE DE HABER SELECCIONADO UN PROYECTO EN LA LISTA DE LA PANTALLA PRINCIPAL, SOLO TIENE QUE HACER CLICK EN EL PROYECTO QUE DESEE");
+					JOptionPane.showMessageDialog(this, "PORFAVOR ASEGURESE DE HABER SELECCIONADO UN PROYECTO EN LA LISTA DE LA PANTALLA PRINCIPAL, SOLO TIENE QUE HACER CLICK EN EL PROYECTO QUE DESEE, SI YA LO HIZO DELE ACEPTAR SINO PORFAVOR DEVUELVASE Y SELECCIONE");
 					principal.buscarPorNombre(  );
 				} catch (IOException e1) {
 					// TODO Auto-generated catch block
@@ -196,7 +196,7 @@ public class PanelBotones extends JPanel implements ActionListener
         
         else if(comando.equals( "ReporteParticular" ))
         {
-        	JOptionPane.showMessageDialog(this, "PORFAVOR ASEGURESE DE HABER SELECCIONADO UN PROYECTO EN LA LISTA DE LA PANTALLA PRINCIPAL, SOLO TIENE QUE HACER CLICK EN EL PROYECTO QUE DESEE");
+        	JOptionPane.showMessageDialog(this, "PORFAVOR ASEGURESE DE HABER SELECCIONADO UN PROYECTO EN LA LISTA DE LA PANTALLA PRINCIPAL, SOLO TIENE QUE HACER CLICK EN EL PROYECTO QUE DESEE, SI YA LO HIZO DELE ACEPTAR SINO PORFAVOR DEVUELVASE Y SELECCIONE");
         	String valorIngresado = JOptionPane.showInputDialog( "Ingrese el nombre del participante" );
         	String valorIngresado2 = JOptionPane.showInputDialog( "Ingrese el correo del participante" );
         	String valorfinal = valorIngresado + " " + "(" + valorIngresado2 + ")";
