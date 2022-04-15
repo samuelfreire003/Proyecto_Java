@@ -48,10 +48,10 @@ public class Diagramabarra extends JPanel
 	    int panelHeight = dim.height;
 	    int barWidth = panelWidth / values.length;
 	 
-	    Font titleFont = new Font("Book Antiqua", Font.BOLD, 15);
+	    Font titleFont = new Font("Arial", Font.BOLD, 15);
 	    FontMetrics titleFontMetrics = g.getFontMetrics(titleFont);
 	 
-	    Font labelFont = new Font("Book Antiqua", Font.PLAIN, 14);
+	    Font labelFont = new Font("Arial", Font.PLAIN, 14);
 	    FontMetrics labelFontMetrics = g.getFontMetrics(labelFont);
 	 
 	    int titleWidth = titleFontMetrics.stringWidth(title);
@@ -82,6 +82,7 @@ public class Diagramabarra extends JPanel
 	      g.setColor(Color.red);
 	      g.fillRect(valueP, valueQ, barWidth - 2, height);
 	      g.setColor(Color.black);
+	      g.drawString(String.valueOf(values[j]) + " segundos",valueP + 25, valueQ);
 	      g.drawRect(valueP, valueQ, barWidth - 2, height);
 	 
 	      int labelWidth = labelFontMetrics.stringWidth(labels[j]);
