@@ -44,5 +44,14 @@ public class PanelInfo extends JPanel
 		add(lblFechaFinal);
 		add(txtFechaFinal);
 	}
+	
+	public void actualizar(String InfoProyecto)
+    {
+		String [] partes = InfoProyecto.split( "," );
+		txtNombreProyecto.setText( partes[0] );
+		txtFechaInicio.setText( partes[2] );
+		txtParticipanteInicial.setText( partes[4] );
+		txtFechaFinal.setText( partes[3] );
+    }
 
 }

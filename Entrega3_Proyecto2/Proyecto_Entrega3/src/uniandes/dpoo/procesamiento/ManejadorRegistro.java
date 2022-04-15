@@ -256,5 +256,46 @@ public class ManejadorRegistro
 		return RegistrosMiembroCantidad;
 		
 	}
+	
+	public static String BuscarPorNombreRegistroTotal (String proyecto, String Nombre) throws FileNotFoundException, IOException
+	{
+		
+		Map<String, String> registros = CargarRegistrosTiempoTotal(proyecto);
+		String TiempoTotal = registros.get(Nombre);
+		
+		return TiempoTotal;
+	}
+	
+	public static String BuscarPorNombreRegistroDia (String proyecto, String Nombre) throws FileNotFoundException, IOException
+	{
+		
+		Map<String, Map<String, String>> registrosDia = CargarRegistrosTiempoDia(proyecto);
+		Map<String, String> registrotiempodia = registrosDia.get(Nombre);
+		
+		String finalpalabra = "";
+		
+		for (String llavedia: registrotiempodia.keySet())
+		{
+			finalpalabra += ("/n" + llavedia  + "tiempo: " + registrotiempodia.get(llavedia));
+		}
+		
+		return finalpalabra;
+	}
+	
+	public static String BuscarPorNombreRegistroTipo (String proyecto, String Nombre) throws FileNotFoundException, IOException
+	{
+		
+		Map<String, Map<String, String>> registrosTipo = CargarRegistrosTiempoTipo(proyecto);
+		Map<String, String> registrotiempoTipo = registrosTipo.get(Nombre);
+		
+		String finalpalabra = "";
+		
+		for (String llavedia: registrosTipo.keySet())
+		{
+			finalpalabra += ("/n" + llavedia  + "tiempo: " + registrosTipo.get(llavedia));
+		}
+		
+		return finalpalabra;
+	}
 
 }

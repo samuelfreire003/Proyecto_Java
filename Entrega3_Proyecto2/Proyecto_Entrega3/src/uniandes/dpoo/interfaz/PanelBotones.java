@@ -4,12 +4,14 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.util.List;
 import java.util.Map;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTextPane;
 import javax.swing.border.TitledBorder;
 
 import uniandes.dpoo.consola.AplicacionProyecto;
@@ -27,18 +29,22 @@ public class PanelBotones extends JPanel implements ActionListener
 	private JButton BOTON5;
 	private JButton BOTON6;
 	private JButton BOTON7;
+	private JButton BOTON8;
 	
 	private InterfazPrincipal principal;
 	
-	public PanelBotones () 
+	public PanelBotones ( InterfazPrincipal principal ) 
 	{
+		this.principal= principal;
 		setBorder( new TitledBorder ( "Opciones" ));
 		setLayout( new GridLayout(2, 4));
 		
-		BOTON1 = new JButton( "Buscar por nombre" );
+		BOTON1 = new JButton( "Mostrar Informacion Proyecto" );
+		BOTON1.addActionListener( this );
+		BOTON1.setActionCommand( "BuscarPorNombre" );
 		add(BOTON1);
 		
-		BOTON2 = new JButton( "Crear reporte Predefinida" );
+		BOTON2 = new JButton( "Crear reporte" );
 		BOTON2.addActionListener( this );
 		BOTON2.setActionCommand( "CrearParticipante" );
 		add(BOTON2);
@@ -64,7 +70,14 @@ public class PanelBotones extends JPanel implements ActionListener
 		add(BOTON6);
 		
 		BOTON7 = new JButton( "Visualizar Actividades dia" );
+		BOTON7.addActionListener( this );
+		BOTON7.setActionCommand( "Visualizacion" );
 		add(BOTON7);
+		
+		BOTON8 = new JButton( "Reporte por Nombre de participante" );
+		BOTON8.addActionListener( this );
+		BOTON8.setActionCommand( "ReporteParticular" );
+		add(BOTON8);
 	}
 	
 	@Override
@@ -113,6 +126,7 @@ public class PanelBotones extends JPanel implements ActionListener
         {
         	VentanaReporteGeneral ventanaPrincipal;
 			try {
+				JOptionPane.showMessageDialog(this, "PORFAVOR ASEGURESE DE HABER SELECCIONADO UN PROYECTO EN LA LISTA DE LA PANTALLA PRINCIPAL, SOLO TIENE QUE HACER CLICK EN EL PROYECTO QUE DESEE");
 				ventanaPrincipal = new VentanaReporteGeneral();
 				ventanaPrincipal.setVisible(true);
 	    		ventanaPrincipal.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -126,6 +140,7 @@ public class PanelBotones extends JPanel implements ActionListener
         
         else if(comando.equals( "CrearParticipante" ))
         {
+        	JOptionPane.showMessageDialog(this, "PORFAVOR ASEGURESE DE HABER SELECCIONADO UN PROYECTO EN LA LISTA DE LA PANTALLA PRINCIPAL, SOLO TIENE QUE HACER CLICK EN EL PROYECTO QUE DESEE");
         	VentanaCreacionParticipante ventanaPrincipalcreacionparticipante;
 			ventanaPrincipalcreacionparticipante = new VentanaCreacionParticipante();
 			ventanaPrincipalcreacionparticipante.setVisible(true);
@@ -138,6 +153,7 @@ public class PanelBotones extends JPanel implements ActionListener
         {
         	VentanaRegistroCrono ventanaPrincipalcreacionparticipantecrono;
         	try {
+        		JOptionPane.showMessageDialog(this, "PORFAVOR ASEGURESE DE HABER SELECCIONADO UN PROYECTO EN LA LISTA DE LA PANTALLA PRINCIPAL, SOLO TIENE QUE HACER CLICK EN EL PROYECTO QUE DESEE");
 				ventanaPrincipalcreacionparticipantecrono = new VentanaRegistroCrono();
 				ventanaPrincipalcreacionparticipantecrono.setVisible(true);
 	        	ventanaPrincipalcreacionparticipantecrono.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -147,6 +163,51 @@ public class PanelBotones extends JPanel implements ActionListener
 			}
         	 
     		
+        }
+        
+        else if(comando.equals( "Visualizacion" ))
+        {
+        	VentanaVisualizacionProgreso ventanaVisu;
+        	try {
+        		JOptionPane.showMessageDialog(this, "PORFAVOR ASEGURESE DE HABER SELECCIONADO UN PROYECTO EN LA LISTA DE LA PANTALLA PRINCIPAL, SOLO TIENE QUE HACER CLICK EN EL PROYECTO QUE DESEE");
+        		ventanaVisu = new VentanaVisualizacionProgreso();
+        		ventanaVisu.setVisible(true);
+        		ventanaVisu.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+        	 
+    		
+        }
+        
+        else if(comando.equals( "BuscarPorNombre" ))
+        {
+  
+				try {
+					JOptionPane.showMessageDialog(this, "PORFAVOR ASEGURESE DE HABER SELECCIONADO UN PROYECTO EN LA LISTA DE LA PANTALLA PRINCIPAL, SOLO TIENE QUE HACER CLICK EN EL PROYECTO QUE DESEE");
+					principal.buscarPorNombre(  );
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+
+        }
+        
+        else if(comando.equals( "ReporteParticular" ))
+        {
+        	JOptionPane.showMessageDialog(this, "PORFAVOR ASEGURESE DE HABER SELECCIONADO UN PROYECTO EN LA LISTA DE LA PANTALLA PRINCIPAL, SOLO TIENE QUE HACER CLICK EN EL PROYECTO QUE DESEE");
+        	String valorIngresado = JOptionPane.showInputDialog( "Ingrese el nombre del participante" );
+        	String valorIngresado2 = JOptionPane.showInputDialog( "Ingrese el correo del participante" );
+        	String valorfinal = valorIngresado + " " + "(" + valorIngresado2 + ")";
+            try {
+            	
+				principal.buscarPorNombreReporte( valorfinal );
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+
         }
         
         

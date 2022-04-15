@@ -3,11 +3,13 @@ package uniandes.dpoo.interfaz;
 import java.awt.BorderLayout;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.List;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 import uniandes.dpoo.procesamiento.ManejadorProyecto;
+import uniandes.dpoo.procesamiento.ManejadorRegistro;
 
 public class InterfazPrincipal extends JFrame
 {
@@ -22,8 +24,6 @@ public class InterfazPrincipal extends JFrame
 	
 	private PanelParticipante panelparticipante;
 	
-	private ManejadorProyecto proyectos;
-	
 	public InterfazPrincipal () throws FileNotFoundException, IOException 
 	{
 		
@@ -37,16 +37,16 @@ public class InterfazPrincipal extends JFrame
 		add(panelbanner, BorderLayout.NORTH);
 		
 		panelinfo = new  PanelInfo();
-		add(panelinfo, BorderLayout.CENTER);
+		add(panelinfo, BorderLayout.EAST);
 		
-		panelbotones = new  PanelBotones();
+		panelbotones = new  PanelBotones( this );
 		add(panelbotones, BorderLayout.SOUTH);
 		
 		panelinfoproyectos = new  PanelInfoProyectos();
-		add(panelinfoproyectos, BorderLayout.WEST);
+		add(panelinfoproyectos, BorderLayout.CENTER);
 		
 		panelparticipante = new  PanelParticipante();
-		add(panelparticipante, BorderLayout.EAST);
+		add(panelparticipante, BorderLayout.WEST);
 		
 		
 	}
@@ -72,6 +72,26 @@ public class InterfazPrincipal extends JFrame
 		interfaz.setVisible( true );
 	}
 	
+	public void buscarPorNombre() throws IOException
+    {
+    		
+    		int opcion = PanelInfoProyectos.Obteneropcion();
+            String proyectoinfo = ManejadorProyecto.DarProyectoInfo(opcion);
+            panelinfo.actualizar( proyectoinfo );
+            
+    }
+	
+	public void buscarPorNombreReporte(String Nombre) throws IOException
+    {
+			List<String> ProyectoCreados = ManejadorProyecto.CargarProyectos();
+    		int opcion = PanelInfoProyectos.Obteneropcion();
+    		String proyecto = ProyectoCreados.get(opcion);
+            String registrototal = ManejadorRegistro.BuscarPorNombreRegistroTotal(proyecto,Nombre);
+            String registrodia = ManejadorRegistro.BuscarPorNombreRegistroDia(proyecto,Nombre);
+            String registrotipo = ManejadorRegistro.BuscarPorNombreRegistroTipo(proyecto,Nombre);
+            panelparticipante.actualizar( Nombre,registrototal,registrodia,registrotipo );
+            
+    }
 	
 
 }

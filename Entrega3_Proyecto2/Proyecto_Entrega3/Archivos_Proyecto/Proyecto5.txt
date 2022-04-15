@@ -2,3 +2,4 @@ titulo,descripcion,tipo,fechaInicio,horaInicio,horaFinal,particpanteEncargado
 Cronometrar boletos de cine,se va a cronometrar los boletos de cine que se vendieron en un dia,Cronometrar,3/4/2022,20:33,23:10,Samuel Freire (s.freire)
 Llenar formato covid,se espera llenar los formatos covid de un cierta cantiad de personas,LLenar,27/10/2003,10:10,12:10,Felipe Garcia (f.garcia)
 LLenar formato de admision,se espera llevar un control sobre las admisiones de ciertas personas,Documentacion,3/4/2022,20:35,20:36,Samuel Freire (s.freire)
+LLevar acciones de bolsa,llevar las acciones de la bolsa de new york,analisis,14/4/2022,3:14,12:20,samuel freire (s.freire)

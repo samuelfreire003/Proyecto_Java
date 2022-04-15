@@ -46,5 +46,14 @@ public class PanelParticipante extends JPanel
 		add(lblTiempoActi);
 		add(txtTiempoActi);
 	}
+	
+	public void actualizar(String nombre, String total, String tiempodia, String tiempotipo)
+    {
+
+		txtNombreParti.setText( nombre );
+		txtTiempoTotal.setText( total );
+		txtTiempoTipo.setText( tiempotipo );
+		txtTiempoActi.setText( tiempodia );
+    }
 
 }

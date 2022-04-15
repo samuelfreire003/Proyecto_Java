@@ -8,6 +8,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.swing.JTextPane;
+
+import uniandes.dpoo.interfaz.PanelInfoProyectos;
 import uniandes.dpoo.modelo.Fecha;
 import uniandes.dpoo.modelo.Hora;
 import uniandes.dpoo.modelo.Participante;
@@ -122,6 +125,29 @@ public class ManejadorProyecto
 		
 		return ProyectosCargadosTipo;
 		
+	}
+	
+	public static  String  DarProyectoInfo(int OpcionProyecto) throws IOException
+	{
+		
+		List<String> ProyectosCargados = new ArrayList<>();
+		
+		BufferedReader br = new BufferedReader(new FileReader("./Archivos_Proyecto/Proyectos.txt"));
+		String linea = br.readLine();
+		while (linea != null) // Cuando se llegue al final del archivo, linea tendrá el valor null
+		{
+			// Separar los valores que estaban en una línea
+			String partes = linea;
+			
+			ProyectosCargados.add(partes);
+			linea = br.readLine(); // Leer la siguiente línea
+		}
+	
+		br.close();
+		
+		String info = ProyectosCargados.get(OpcionProyecto);
+		
+		return info;
 	}
 	
 }
