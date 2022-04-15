@@ -23,7 +23,7 @@ public class VentanaVisualizacionProgreso extends JFrame
 	public VentanaVisualizacionProgreso () throws FileNotFoundException, IOException
 	{
 		
-		setSize( 700, 500 );
+		setSize( 800, 500 );
 		
 		List<String> ProyectoCreados = ManejadorProyecto.CargarProyectos();
 		
@@ -58,7 +58,7 @@ public class VentanaVisualizacionProgreso extends JFrame
 			
 		}
 		
-		String title = "Progreso del proyecto por dias";
+		String title = "Progreso del proyecto por dias, basado en el tiempo total desarrolado en cada dia";
 	    Integer[] values = new Integer[(mapafinal.values()).size()];
 	    String[] labels = new String[(mapafinal.keySet()).size()];
 	    
