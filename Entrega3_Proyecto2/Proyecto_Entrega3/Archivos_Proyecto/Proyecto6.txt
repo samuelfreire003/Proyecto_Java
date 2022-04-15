@@ -1,0 +1,5 @@
+titulo,descripcion,tipo,fechaInicio,horaInicio,horaFinal,particpanteEncargado
+Analisis bolsa,Se va a llevar a cabo el analisis de la bolsa de nueva york,Documentacion,15/4/2022,13:16,14:20,Samuel Freire (s.freire)
+Llavr bolsa china,Analisis de la bolsa china,Analisis,27/10/2003,12:40,13:40,Felipe Garcia (f.garcia)
+Analisis bolsa de chicago,se va a llevar el analisis de la bolsa de chicago,Analisis,15/4/2022,13:19,13:19,Samuel Freire (f.garcia)
+Analisis de bolsa de bogota,se va a lleavr a cabo el analisis de la bolsa de bogota,docuemtacion,27/10/2004,13:21,13:23,Samuel Freire (s.freire)
