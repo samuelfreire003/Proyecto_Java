@@ -27,7 +27,7 @@ public class InterfazPrincipal extends JFrame
 	public InterfazPrincipal () throws FileNotFoundException, IOException 
 	{
 		
-		setSize( 900, 400 );
+		setSize( 1000, 400 );
 		setTitle( "Aplicacion Proyectos" );
 		setDefaultCloseOperation(EXIT_ON_CLOSE); 
 		setLayout( new BorderLayout());

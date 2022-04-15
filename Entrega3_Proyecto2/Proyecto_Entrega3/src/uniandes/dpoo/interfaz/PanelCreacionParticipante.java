@@ -80,7 +80,7 @@ public class PanelCreacionParticipante extends JPanel implements ActionListener
 		txtCorreoCreador = new JTextField();
 		add(txtCorreoCreador);
 		
-		lblpreedifinicion = new JLabel( "Porfavor seleccione la caja si desea preedefinir la fecha actual " );
+		lblpreedifinicion = new JLabel( "Porfavor seleccione la caja si desea preedefinir la fecha y hora inicial actual " );
 		add(lblpreedifinicion);
 		
 		cajapre = new JCheckBox();

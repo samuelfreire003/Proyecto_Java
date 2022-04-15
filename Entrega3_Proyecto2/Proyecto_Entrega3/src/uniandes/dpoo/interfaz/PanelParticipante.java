@@ -5,6 +5,7 @@ import java.awt.GridLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
 
@@ -17,9 +18,9 @@ public class PanelParticipante extends JPanel
 	private JLabel lblTiempoTotal;
 	private JTextField txtTiempoTotal;
 	private JLabel lblTiempoTipo;
-	private JTextField txtTiempoTipo;
+	private JTextArea txtTiempoTipo;
 	private JLabel lblTiempoActi;
-	private JTextField txtTiempoActi;
+	private JTextArea txtTiempoActi;
 	
 	public PanelParticipante () 
 	{
@@ -28,21 +29,25 @@ public class PanelParticipante extends JPanel
 		
 		lblNombreParti = new JLabel( " Nombre Part: " );
 		txtNombreParti = new JTextField( "nombre...." );
+		txtNombreParti.setEditable( false );
 		add(lblNombreParti);
 		add(txtNombreParti);
 		
 		lblTiempoTotal = new JLabel( " Tiempo Total: " );
 		txtTiempoTotal = new JTextField( "Total...." );
+		txtTiempoTotal.setEditable( false );
 		add(lblTiempoTotal);
 		add(txtTiempoTotal);
 		
-		lblTiempoTipo = new JLabel( " Tiempo Tipo: " );
-		txtTiempoTipo = new JTextField( "Tipo...." );
+		lblTiempoTipo = new JLabel( " Tiempo por Tipo: " );
+		txtTiempoTipo = new JTextArea( "Tipo...." );
+		txtTiempoTipo.setEditable( false );
 		add(lblTiempoTipo);
 		add(txtTiempoTipo);
 		
-		lblTiempoActi = new JLabel( " Tiempo Acti: " );
-		txtTiempoActi = new JTextField( "Acti...." );
+		lblTiempoActi = new JLabel( " Tiempo por Dia: " );
+		txtTiempoActi = new JTextArea( "Acti...." );
+		txtTiempoActi.setEditable( false );
 		add(lblTiempoActi);
 		add(txtTiempoActi);
 	}

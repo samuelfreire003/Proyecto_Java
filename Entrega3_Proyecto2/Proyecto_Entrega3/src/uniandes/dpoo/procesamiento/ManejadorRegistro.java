@@ -276,7 +276,7 @@ public class ManejadorRegistro
 		
 		for (String llavedia: registrotiempodia.keySet())
 		{
-			finalpalabra += ("/n" + llavedia  + "tiempo: " + registrotiempodia.get(llavedia));
+			finalpalabra += ("\n" + llavedia  + "  -tiempo: " + registrotiempodia.get(llavedia) + " seg." );
 		}
 		
 		return finalpalabra;
@@ -290,9 +290,9 @@ public class ManejadorRegistro
 		
 		String finalpalabra = "";
 		
-		for (String llavedia: registrosTipo.keySet())
+		for (String llavedia: registrotiempoTipo.keySet())
 		{
-			finalpalabra += ("/n" + llavedia  + "tiempo: " + registrosTipo.get(llavedia));
+			finalpalabra += ("\n" + llavedia  + "  -tiempo: " + registrotiempoTipo.get(llavedia) + " seg.");
 		}
 		
 		return finalpalabra;
