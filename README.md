@@ -1,4 +1,3 @@
-# Proyecto_1
-Entregas del proyecto 1
+# Proyecto_Java
 
-Los elementos de sieño para la entrega 2 proyecto 2 estan en la carpeta de la implementacion, en una carpte con el nombre de entreg2 proyecto2. Y la implimetacion esta en la carpeta que dice entreg3proyecto2
+This project was developed as a hands-on exercise to deeply understand core Java concepts, focusing on object-oriented programming, especially polymorphism, and the full software development lifecycle. It includes UML diagrams for planning and design, a clean object-oriented structure, and a set of unit tests to ensure functionality and reliability. The goal was to simulate the development of a basic project management system, applying principles such as encapsulation, inheritance, and interface implementation. It also emphasizes writing maintainable code, understanding class responsibilities, and practicing test-driven development (TDD).
